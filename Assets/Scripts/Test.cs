@@ -9,8 +9,8 @@ public class Test : MonoBehaviour
     void Start()
     {
         //EmotivExample
-        string ClientId = "pfkYGlGAd7BNXqagYwxy8m42AISpNOsOCu2g8NVx";
-        string ClientSecret = "Redacted for Github";
+        string ClientId = "DbWQkptTlZ1Lix2Pyjga0guPCE7dSQV61I2QynrA";
+        string ClientSecret = "AUk5iZQaVs7vC7LprApA9j1VJpCNfRw7ZSluLoj83s4w6CG4LhaJ9OzRjVttrqAuuG2aWXwuggimDZCG7ZkCCmcWPcrjbQi3of1XuT9iKawt3uiYcx0HdGayXsoEYDXj";
         string TmpAppDataDir = "UnityApp";
         string AppUrl = "wss://localhost:6868";
 
@@ -26,7 +26,7 @@ public class Test : MonoBehaviour
 
         // creating session and subscribe data
         List<string> dataStreamList = new List<string>() { DataStreamName.DevInfos };
-        DataStreamManager.Instance.StartDataStream(dataStreamList, "headsetID");
+        DataStreamManager.Instance.StartDataStream(dataStreamList, "69A0EF4C");
         
         // You also can suscribe more data
         DataStreamManager.Instance.SubscribeMoreData(new List<string>() { DataStreamName.MentalCommands});

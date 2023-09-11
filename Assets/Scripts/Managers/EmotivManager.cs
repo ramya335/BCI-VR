@@ -40,9 +40,10 @@ public class EmotivManager : MonoBehaviour
 
     List<string> dataStreamList = new List<string>() { DataStreamName.DevInfos, DataStreamName.MentalCommands,
                                                        DataStreamName.SysEvents, DataStreamName.BandPower};
-    string profileName = "Student";
-    string emulatorName = "EPOCX-41B0C4C2";
-    string EpocxName = "EPOCX-E2020A9C";
+    string profileName = "eddy";
+    string headsetId = "EPOCX-69A0EF4C";
+    string emulatorName = "EPOCX-69A0EF4C";
+    string EpocxName = "EPOCX-69A0EF4C";
 
 
     // Start is called before the first frame update
@@ -197,14 +198,14 @@ public class EmotivManager : MonoBehaviour
         powRcvd = true;
 
         _bciTraining.QueryProfile();
-        _bciTraining.LoadProfile(profileName);
+        _bciTraining.LoadProfileWithHeadset(profileName, headsetId);
         mentalCmdRcvd = true;
     }
 
     private void onBCIDisable()
     {
         bciEnabled = false;
-        _bciTraining.UnLoadProfile(profileName);
+        _bciTraining.UnLoadProfile(profileName, headsetId);
         DataStreamManager.Instance.UnSubscribeData(dataStreamList);
         DataStreamManager.Instance.Stop();
         mentalCmdRcvd = false;
